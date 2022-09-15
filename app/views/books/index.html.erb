@@ -7,7 +7,8 @@
     <tr>
       <th>Title</th>
       <th>Author</th>
-      <th>Publication Date</th>
+      <th>Publication Date (YYYY-MM-DD)</th>
+      <th>Price ($)</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= book.title %></td>
         <td><%= book.author %></td>
         <td><%= book.pub_date %></td>
+        <td><%= number_to_currency(book.price) %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>

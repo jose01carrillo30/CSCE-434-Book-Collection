@@ -7,6 +7,8 @@
   <%= @book.author %>
   <strong>Publication Date:</strong>
   <%= @book.pub_date %>
+  <strong>Price:</strong>
+  <%= number_to_currency(@book.price) %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
