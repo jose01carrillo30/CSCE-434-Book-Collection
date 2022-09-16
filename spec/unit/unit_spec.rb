@@ -15,3 +15,50 @@ RSpec.describe Book, type: :model do
     expect(subject).not_to be_valid
   end
 end
+
+RSpec.describe Book, type: :model do
+  subject do
+    described_class.new(title: 'harry potter', author: 'jk rolling', pub_date: '01/02/2000', price: '10.99')
+  end
+
+  it 'is valid with valid attributes' do
+    expect(subject).to be_valid
+  end
+
+  it 'is not valid without a name' do
+    subject.author = nil
+    expect(subject).not_to be_valid
+  end
+end
+
+
+RSpec.describe Book, type: :model do
+  subject do
+    described_class.new(title: 'harry potter', author: 'jk rolling', pub_date: '01/02/2000', price: '10.99')
+  end
+
+  it 'is valid with valid attributes' do
+    expect(subject).to be_valid
+  end
+
+  it 'is not valid without a name' do
+    subject.pub_date = nil
+    expect(subject).not_to be_valid
+  end
+end
+
+
+RSpec.describe Book, type: :model do
+  subject do
+    described_class.new(title: 'harry potter', author: 'jk rolling', pub_date: '01/02/2000', price: '10.99')
+  end
+
+  it 'is valid with valid attributes' do
+    expect(subject).to be_valid
+  end
+
+  it 'is not valid without a name' do
+    subject.price = nil
+    expect(subject).not_to be_valid
+  end
+end
