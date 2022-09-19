@@ -3,12 +3,21 @@
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
+</p>
+
+<p>
   <strong>Author:</strong>
   <%= @book.author %>
-  <strong>Publication Date:</strong>
-  <%= @book.pub_date %>
+</p>
+
+<p>
   <strong>Price:</strong>
-  <%= number_to_currency(@book.price) %>
+  <%= @book.price %>
+</p>
+
+<p>
+  <strong>Published date:</strong>
+  <%= @book.published_date %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
